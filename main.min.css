@@ -9023,9 +9023,26 @@ a {
     font-weight: 500;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center
+    align-items: center;
+    width: fit-content;
 }
 
+.widget .sort-popup-content-js {
+    display: none;
+    position: absolute !important;
+    width: fit-content !important;
+    right: 0 !important;
+    margin-left: 84% !important;
+    top: 50px;
+}
+
+.widget .form-wrap__more-filters-btns{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+
+}
 .widget .form-wrap__more-filters-btn span {
     font-weight: 500;
     font-size: .875rem;
@@ -9039,7 +9056,10 @@ a {
 
 .widget .form-wrap__more-filters-btn.active .icon {
     -webkit-transform: rotateX(180deg);
-    transform: rotateX(180deg)
+    transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
 }
 
 .widget .form-wrap__more-filters-btn.main-page-btn {
@@ -13970,6 +13990,14 @@ a {
         padding: 1.875rem
     }
 
+    .widget .sort-popup-content-js .form-wrap__long-ch-cont {
+        padding: 0.875rem 0.575rem 0.875rem 0.875rem;
+    }
+    
+    .widget .sort-popup-content-js{
+        min-width: 165px;
+    }
+
     .widget .form-wrap__square-checkbox-cont {
         width: calc(25% - 9px);
         margin-right: 12px;
@@ -16637,6 +16665,14 @@ a {
         padding-right: 1.25rem;
         padding-left: .9375rem
     }
+    .widget .sort-popup-content-js {
+        display: none;
+        position: absolute !important;
+        width: fit-content !important;
+        right: 0 !important;
+        margin-left: 84% !important;
+        top: 50px;
+    }
 }
 
 @media (min-width:1280px) and (min-width:1280px) {
@@ -18668,6 +18704,9 @@ a {
     .top-nav__container {
         max-width: 100% !important
     }
+    .widget .sort-popup-content-js {
+        margin-left: 82% !important;
+    }
 }
 
 @media (max-width:991.98px) {
@@ -18717,6 +18756,9 @@ a {
 
     .sListVacancies .section-title {
         text-align: center
+    }
+    .widget .sort-popup-content-js {
+        margin-left: 76% !important;
     }
 }
 
@@ -18791,6 +18833,62 @@ a {
         transform: none !important;
         -webkit-animation: none !important;
         animation: none !important
+    }
+    .widget .form-wrap__sort-strip {
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        color: #363636;
+        background-color: #fff;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+        border-radius: 5px;
+        padding: 0.875rem .9375rem;
+        margin-top: 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        max-height: 50px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .widget .form-wrap__sort-strip-sort-cont {
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        color: #363636;
+        background-color: #fff;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+        border-radius: 5px;
+        padding: 0.875rem .9375rem;
+        margin-top: 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        max-height: 50px;
+        align-items: center;
+        display: none;
+        justify-content: space-between;
+    }
+    .form-wrap__more-filters-btn.sort-btn-js.d-md-none{
+        width: 100%;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 9px 0 0;
+    }
+    .form-wrap__pop-up-content.object-type.sort-popup-content-js.form-wrap__sort-strip-sort-cont.d-md-none.active{
+        display: flex;
+        position: relative !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+        top: 0;
+        max-height: fit-content;
     }
 }
 

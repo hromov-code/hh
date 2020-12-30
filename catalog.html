@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="ru">
-3
+
 <head>
     <meta charset="utf-8">
         <title>Купить</title>
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://house-hunters.ru/libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
     <link rel="stylesheet" href="https://house-hunters.ru/libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
     
-    <link rel="stylesheet" href="https://house-hunters.ru/css/main.min.css"/>
+    <link rel="stylesheet" href="main.min.css">
     <link rel="stylesheet" href="https://house-hunters.ru/css/costume.css"/>
 
     <script src="https://www.google.com/recaptcha/api.js?render=6Lf7adIZAAAAAMuJ10heEL_x7PEY1RtYTNxOBVpP"></script>
@@ -579,13 +579,64 @@
 
                                         
                             <a  class="form-wrap__more-filters-btn more-filters-btn-js d-md-none" href="#"><span>Больше фильтров</span>
-                    <svg class="icon icon-chevron-down ">
-                        <use xlink:href="https://house-hunters.ru/img/svg/sprite.svg#chevron-down"></use>
-                    </svg>
-                </a>
+                                <svg class="icon icon-chevron-down ">
+                                    <use xlink:href="https://house-hunters.ru/img/svg/sprite.svg#chevron-down"></use>
+                                </svg>
+                            </a>
+                            
             
 
         </div>
+        <div class="filters-wrap-js">
+
+        <div class="form-wrap__sort-strip sort-btn-js d-md-none">
+            <a class="form-wrap__more-filters-btn  d-md-none"
+            href="#"><span>Сортировать</span>
+                <svg class="icon icon-chevron-down ">
+                    <use xlink:href="https://house-hunters.ru/img/svg/sprite.svg#chevron-down"></use>
+                </svg>
+            </a>
+        </div>
+            <div class="form-wrap__pop-up-content object-type sort-popup-content-js form-wrap__sort-strip-sort-cont d-md-none">
+                <div class="form-wrap__long-ch-cont">
+
+                        <label class="long-checkbox" data-tt="default">
+                            <input type="radio" name="type" value="default" checked="">
+                            <div class="checkbox">
+                                <svg class="icon icon-check ">
+                                    <use xlink:href="https://house-hunters.ru/img/svg/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="long-chb-txt">По умолчанию</div>
+                        </label>
+                    
+                        
+                        <label class="long-checkbox" data-tt="дешевле">
+                            <input type="radio" name="type" value="дешевле">
+                            <div class="checkbox">
+                                <svg class="icon icon-check ">
+                                    <use xlink:href="https://house-hunters.ru/img/svg/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="long-chb-txt">Сначала дешевле</div>
+                        </label>
+                    
+                        
+                        <label class="long-checkbox" data-tt="дороже">
+                            <input type="radio" name="type" value="дороже">
+                            <div class="checkbox">
+                                <svg class="icon icon-check ">
+                                    <use xlink:href="https://house-hunters.ru/img/svg/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="long-chb-txt">Сначала дороже</div>
+                        </label>
+                    
+                </div>
+            </div>
+        </div>
+
+
         <button class="form-wrap__submit-btn d-none d-md-flex" type="submit">
             <svg class="icon icon-search ">
                 <use xlink:href="https://house-hunters.ru/img/svg/sprite.svg#search"></use>
@@ -593,13 +644,62 @@
             <span data-count-check>Показать 24616 объектов</span>
         </button>
     </div>
-
-        <a class="form-wrap__more-filters-btn more-filters-btn-js d-none d-md-flex"
+        <div class="form-wrap__more-filters-btns filters-wrap-js">
+             <a class="form-wrap__more-filters-btn more-filters-btn-js d-none d-md-flex"
                       href="#"><span>Больше фильтров</span>
-            <svg class="icon icon-chevron-down ">
-                <use xlink:href="https://house-hunters.ru/img/svg/sprite.svg#chevron-down"></use>
-            </svg>
-        </a>
+                <svg class="icon icon-chevron-down ">
+                    <use xlink:href="https://house-hunters.ru/img/svg/sprite.svg#chevron-down"></use>
+                </svg>
+            </a>
+
+            <a class="form-wrap__more-filters-btn sort-btn-js d-none d-md-flex"
+                        href="#"><span>Сортировать</span>
+                <svg class="icon icon-chevron-down ">
+                    <use xlink:href="https://house-hunters.ru/img/svg/sprite.svg#chevron-down"></use>
+                </svg>
+            </a>
+
+            <div class="form-wrap__pop-up-content object-type sort-popup-content-js">
+                <div class="form-wrap__long-ch-cont">
+                    
+                        
+                        <label class="long-checkbox" data-tt="default">
+                            <input type="radio" name="type" value="default" checked="">
+                            <div class="checkbox">
+                                <svg class="icon icon-check ">
+                                    <use xlink:href="https://house-hunters.ru/img/svg/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="long-chb-txt">По умолчанию</div>
+                        </label>
+                    
+                        
+                        <label class="long-checkbox" data-tt="дешевле">
+                            <input type="radio" name="type" value="дешевле">
+                            <div class="checkbox">
+                                <svg class="icon icon-check ">
+                                    <use xlink:href="https://house-hunters.ru/img/svg/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="long-chb-txt">Сначала дешевле</div>
+                        </label>
+                    
+                        
+                        <label class="long-checkbox" data-tt="дороже">
+                            <input type="radio" name="type" value="дороже">
+                            <div class="checkbox">
+                                <svg class="icon icon-check ">
+                                    <use xlink:href="https://house-hunters.ru/img/svg/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="long-chb-txt">Сначала дороже</div>
+                        </label>
+                    
+                </div>
+            </div>
+        </div>
+        
+       
 
       <div class="more-filters-cont">
         <div class="more-filters-cont__row row">
@@ -3764,7 +3864,7 @@
 <!--range slider-->
 <script src="https://house-hunters.ru/libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 <script src="https://house-hunters.ru/libs/inputmask/inputmask.min.js"></script>
-<script src="https://house-hunters.ru/js/common.js"></script>
+<script src="common.js"></script>
 <script src="https://house-hunters.ru/js/costume.js"></script>
 <script src="//ulogin.ru/js/ulogin.js"></script>
 </body>
