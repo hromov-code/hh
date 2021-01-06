@@ -14235,6 +14235,7 @@ a {
         -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, .05);
         box-shadow: 0 4px 30px rgba(0, 0, 0, .05)
     }
+
 }
 
 @media (min-width:992px) {
@@ -18763,6 +18764,9 @@ a {
 }
 
 @media (max-width:767.98px) {
+    .only-desc{
+        display: none!important;
+    }
     .strip-container {
         z-index: 200
     }
@@ -18882,7 +18886,7 @@ a {
         justify-content: space-between;
         padding: 9px 0 0;
     }
-    .form-wrap__pop-up-content.object-type.sort-popup-content-js.form-wrap__sort-strip-sort-cont.d-md-none.active{
+    .form-wrap__pop-up-content.object-type.mob-sort-popup-content-js.form-wrap__sort-strip-sort-cont.d-md-none.active{
         display: flex;
         position: relative !important;
         margin-left: 0 !important;

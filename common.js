@@ -1077,6 +1077,47 @@ function eventHandler() {
 }); //fix
 
 
+$(document).on('click', '.mob-sort-btn-js', function () {
+    var self = this;
+    document.body.removeEventListener('click', widgetsPopupsMissclick);
+    $(this).toggleClass('active');
+    $(this.parentElement).find('.mob-sort-popup-content-js').fadeToggle(function () {
+        $(this).toggleClass('active');
+    }); // close everything but this pop up, dont let to be opened 2 popup at the same time
+
+    // if (window.matchMedia("(max-width: 992px)").matches) {
+        //self
+        var allWidgetsPopups = document.querySelectorAll('.mob-filters-wrap-js');
+
+        var _iterator = _createForOfIteratorHelper(allWidgetsPopups),
+            _step;
+
+        try {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                var wrap = _step.value;
+                var header = wrap.querySelector('.mob-sort-btn-js');
+                var content = wrap.querySelector('.mob-sort-popup-content-js');
+
+                if (self !== header) {
+                    $(header).removeClass('active');
+                    $(content).slideUp(function () {
+                        $(this).removeClass('active');
+                    });
+                }
+            }
+        } catch (err) {
+            _iterator.e(err);
+        } finally {
+            _iterator.f();
+        }
+    // } 
+    //
+
+
+    event.stopPropagation();
+    document.body.addEventListener('click', widgetsPopupsMissclick);
+}); //fix
+
 
 
     window.addEventListener('resize', function () {
