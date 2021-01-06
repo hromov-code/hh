@@ -1446,3 +1446,9 @@ $(document).on('mouseout','#modal-review .rating',function () {
        val = $this.find('input:checked').val()>0?$this.find('input:checked').val():0;
     $this.attr('data-total-value',val);
 });
+
+$(document).ready(function () {
+    $("#modal-hello").fancybox({
+        'overlayShow': true
+    }).trigger('click');
+});

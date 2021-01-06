@@ -1653,7 +1653,41 @@ progress {
 .widget .input-group .form-wrap__submit-btn:focus {
     z-index: 3
 }
+.wrap-hello{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrap-hello div{
+    font-weight: bold;
+    font-size: 2em;
+    color: #267F00;
+    text-align: center;
+    line-height: 1.2em;
+    margin: 16px 0 40px 0;
+}
+.wrap-hello p{
+font-style: normal;
+font-weight: normal;
+font-size: 1.3em;
+text-align: center;
 
+color: #2F2D2D;
+}
+
+@media (max-width: 500px){
+    .wrap-hello div {
+        font-size: 22px;
+        margin: 16px 0 20px 0;
+    }
+    .wrap-hello img {
+        width: 53px;
+        height: 56px;
+    }
+    .wrap-hello p{
+        font-size: 16px;
+    }
+}
 .input-group-text {
     display: -webkit-box;
     display: -ms-flexbox;
