@@ -1035,7 +1035,8 @@ function eventHandler() {
 
 
 
-    $(document).on('click', '.sort-btn-js', function () {
+    $(document).on('click', '.sort-btn-js', function (e) {
+        e.preventDefault();
     var self = this;
     document.body.removeEventListener('click', widgetsPopupsMissclick);
     $(this).toggleClass('active');
@@ -1077,7 +1078,8 @@ function eventHandler() {
 }); //fix
 
 
-$(document).on('click', '.mob-sort-btn-js', function () {
+$(document).on('click', '.mob-sort-btn-js', function (e) {
+    e.preventDefault();
     var self = this;
     document.body.removeEventListener('click', widgetsPopupsMissclick);
     $(this).toggleClass('active');
@@ -1117,6 +1119,7 @@ $(document).on('click', '.mob-sort-btn-js', function () {
     event.stopPropagation();
     document.body.addEventListener('click', widgetsPopupsMissclick);
 }); //fix
+
 
 
 
@@ -1453,12 +1456,53 @@ $(document).ready(function () {
     }).trigger('click');
 });
 
+
+
 var modalCookie = document.querySelector('#modal-cookie');
 var modalCookieClose = document.querySelector('#close-cookie');
 var header = document.querySelector('.header');
 var closePolicy = document.querySelector('#close-policy');
+var inputCheckbox1 = document.querySelector('.sort-popup-content-js #long-check-1');
+var inputCheckbox2 = document.querySelector('.sort-popup-content-js #long-check-2');
+var inputCheckbox3 = document.querySelector('.sort-popup-content-js #long-check-3');
+
+var mobinputCheckbox1 = document.querySelector('.mob-sort-popup-content-js #mob-long-check-1');
+var mobinputCheckbox2 = document.querySelector('.mob-sort-popup-content-js #mob-long-check-2');
+var mobinputCheckbox3 = document.querySelector('.mob-sort-popup-content-js #mob-long-check-3');
+var sortBtn = document.querySelector('.sort-popup-content-js');
+var mobsortBtn = document.querySelector('.mob-sort-popup-content-js');
 
 
+
+
+inputCheckbox1.addEventListener('click', function(){
+    sortBtn.style.display = 'none';
+    sortBtn.classList.remove("active");
+})
+inputCheckbox3.addEventListener('click', function(){
+    sortBtn.style.display = 'none';
+    sortBtn.classList.remove("active");
+
+})
+inputCheckbox2.addEventListener('click', function(){
+    sortBtn.style.display = 'none';
+    sortBtn.classList.remove("active");
+
+})
+mobinputCheckbox1.addEventListener('click', function(){
+    mobsortBtn.style.display = 'none';
+    mobsortBtn.classList.remove("active");
+})
+mobinputCheckbox3.addEventListener('click', function(){
+    mobsortBtn.style.display = 'none';
+    mobsortBtn.classList.remove("active");
+
+})
+mobinputCheckbox2.addEventListener('click', function(){
+    mobsortBtn.style.display = 'none';
+    mobsortBtn.classList.remove("active");
+
+})
 modalCookieClose.addEventListener('click', function(){
     modalCookie.style.display = 'none';
     header.style.top = '0';
@@ -1468,3 +1512,5 @@ closePolicy.addEventListener('click', function(){
     modalCookie.style.display = 'none';
     header.style.top = '0';
 })
+
+

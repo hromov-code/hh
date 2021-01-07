@@ -19073,13 +19073,29 @@ a {
         justify-content: space-between;
         padding: 9px 0 0;
     }
+    .mob-sort-popup-content-js{
+        overflow: hidden;
+        opacity: 0;
+        transition: all .7s ease-out;
+        -webkit-transition: all .7s ease-out;
+        -moz-transition: all .7s ease-out;
+        -ms-transition: all .7s ease-out;
+        -o-transition: all .7s ease-out;
+}
     .form-wrap__pop-up-content.object-type.mob-sort-popup-content-js.form-wrap__sort-strip-sort-cont.d-md-none.active{
         display: flex;
         position: relative !important;
         margin-left: 0 !important;
         width: 100% !important;
         top: 0;
-        max-height: fit-content;
+        max-height: 100px;
+        height: 100px;
+        opacity: 1;
+    }
+
+    .sort-popup-content-js{
+
+        display: none !important;
     }
 }
 
