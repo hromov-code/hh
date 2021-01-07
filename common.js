@@ -1452,3 +1452,19 @@ $(document).ready(function () {
         'overlayShow': true
     }).trigger('click');
 });
+
+var modalCookie = document.querySelector('#modal-cookie');
+var modalCookieClose = document.querySelector('#close-cookie');
+var header = document.querySelector('.header');
+var closePolicy = document.querySelector('#close-policy');
+
+
+modalCookieClose.addEventListener('click', function(){
+    modalCookie.style.display = 'none';
+    header.style.top = '0';
+})
+
+closePolicy.addEventListener('click', function(){
+    modalCookie.style.display = 'none';
+    header.style.top = '0';
+})
