@@ -281,12 +281,13 @@ color: #2F2D2D;
 }
 @media (min-width: 768px){
     .widget .sort-popup-content-js .form-wrap__long-ch-cont {
-        padding: 0.875rem 0.575rem 0.875rem 0.875rem;
+        padding: 0.875rem 0.575rem 0.875rem 10px;
     }
     
     .widget .sort-popup-content-js{
         min-width: 165px;
     }
+    
 
 }
 @media (max-width:1279.98px) {
@@ -375,6 +376,9 @@ color: #2F2D2D;
     }
     .wrap-policy__text::after {
         bottom: 89px;
+    }
+    .form-wrap__more-filters-btn.more-filters-btn-js.d-md-none{
+        width: auto;
     }
 }
 
