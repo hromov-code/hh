@@ -1078,47 +1078,44 @@ function eventHandler() {
 }); //fix
 
 
-$(document).on('click', '.mob-sort-btn-js', function (e) {
-    e.preventDefault();
-    var self = this;
-    document.body.removeEventListener('click', widgetsPopupsMissclick);
-    $(this).toggleClass('active');
-    $(this.parentElement).find('.mob-sort-popup-content-js').fadeToggle(function () {
-        $(this).toggleClass('active');
-    }); // close everything but this pop up, dont let to be opened 2 popup at the same time
+// $(document).on('click', '.mob-sort-btn-js', function (e) {
+//     e.preventDefault();
+//     var self = this;
+//     document.body.removeEventListener('click', widgetsPopupsMissclick);
+//     $(this).toggleClass('active');
+//     $(this.parentElement).find('.mob-sort-popup-content-js').fadeToggle(function () {
+//         $(this).toggleClass('active');
+//     }); 
 
-    // if (window.matchMedia("(max-width: 992px)").matches) {
-        //self
-        var allWidgetsPopups = document.querySelectorAll('.mob-filters-wrap-js');
+//         var allWidgetsPopups = document.querySelectorAll('.mob-filters-wrap-js');
 
-        var _iterator = _createForOfIteratorHelper(allWidgetsPopups),
-            _step;
+//         var _iterator = _createForOfIteratorHelper(allWidgetsPopups),
+//             _step;
 
-        try {
-            for (_iterator.s(); !(_step = _iterator.n()).done;) {
-                var wrap = _step.value;
-                var header = wrap.querySelector('.mob-sort-btn-js');
-                var content = wrap.querySelector('.mob-sort-popup-content-js');
+//         try {
+//             for (_iterator.s(); !(_step = _iterator.n()).done;) {
+//                 var wrap = _step.value;
+//                 var header = wrap.querySelector('.mob-sort-btn-js');
+//                 var content = wrap.querySelector('.mob-sort-popup-content-js');
 
-                if (self !== header) {
-                    $(header).removeClass('active');
-                    $(content).slideUp(function () {
-                        $(this).removeClass('active');
-                    });
-                }
-            }
-        } catch (err) {
-            _iterator.e(err);
-        } finally {
-            _iterator.f();
-        }
-    // } 
-    //
+//                 if (self !== header) {
+//                     $(header).removeClass('active');
+//                     $(content).slideUp(function () {
+//                         $(this).removeClass('active');
+//                     });
+//                 }
+//             }
+//         } catch (err) {
+//             _iterator.e(err);
+//         } finally {
+//             _iterator.f();
+//         }
 
 
-    event.stopPropagation();
-    document.body.addEventListener('click', widgetsPopupsMissclick);
-}); //fix
+
+//     e.stopPropagation();
+//     document.body.addEventListener('click', widgetsPopupsMissclick);
+// });
 
 
 
@@ -1188,11 +1185,17 @@ $(document).on('click', '.mob-sort-btn-js', function (e) {
         } finally {
             _iterator3.f();
         }
-    } //for more filters btn
+    } 
+    $('.mob-sort-btn-js').click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.mob-sort-popup-content-js').slideToggle();
+    });
+    //for more filters btn
 
 
-    $('.more-filters-btn-js').click(function () {
-        event.preventDefault();
+    $('.more-filters-btn-js').click(function (e) {
+        e.preventDefault();
         $(this).toggleClass('active');
         $('.more-filters-cont').slideToggle();
     }); //multiple select
@@ -1452,7 +1455,9 @@ $(document).on('mouseout','#modal-review .rating',function () {
 
 $(document).ready(function () {
     $("#modal-hello").fancybox({
-        'overlayShow': true
+        'overlayShow': true,
+        animationEffect   : "fade",
+        animationDuration : 600,
     }).trigger('click');
 });
 
@@ -1472,7 +1477,15 @@ var mobinputCheckbox3 = document.querySelector('.mob-sort-popup-content-js #mob-
 var sortBtn = document.querySelector('.sort-popup-content-js');
 var mobsortBtn = document.querySelector('.mob-sort-popup-content-js');
 
+modalCookieClose.addEventListener('click', function(){
+    modalCookie.style.display = 'none';
+    header.style.top = '0';
+})
 
+closePolicy.addEventListener('click', function(){
+    modalCookie.style.display = 'none';
+    header.style.top = '0';
+})
 
 
 inputCheckbox1.addEventListener('click', function(){
@@ -1491,26 +1504,18 @@ inputCheckbox2.addEventListener('click', function(){
 })
 mobinputCheckbox1.addEventListener('click', function(){
     mobsortBtn.style.display = 'none';
-    mobsortBtn.classList.remove("active");
+    // mobsortBtn.classList.remove("active");
 })
 mobinputCheckbox3.addEventListener('click', function(){
     mobsortBtn.style.display = 'none';
-    mobsortBtn.classList.remove("active");
+    // mobsortBtn.classList.remove("active");
 
 })
 mobinputCheckbox2.addEventListener('click', function(){
     mobsortBtn.style.display = 'none';
-    mobsortBtn.classList.remove("active");
+    // mobsortBtn.classList.remove("active");
 
 })
-modalCookieClose.addEventListener('click', function(){
-    modalCookie.style.display = 'none';
-    header.style.top = '0';
-})
 
-closePolicy.addEventListener('click', function(){
-    modalCookie.style.display = 'none';
-    header.style.top = '0';
-})
 
 
