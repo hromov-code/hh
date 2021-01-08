@@ -1033,6 +1033,96 @@ function eventHandler() {
         document.body.addEventListener('click', widgetsPopupsMissclick);
     }); //fix
 
+
+
+    $(document).on('click', '.sort-btn-js', function (e) {
+        e.preventDefault();
+    var self = this;
+    document.body.removeEventListener('click', widgetsPopupsMissclick);
+    $(this).toggleClass('active');
+    $(this.parentElement).find('.sort-popup-content-js').fadeToggle(function () {
+        $(this).toggleClass('active');
+    }); // close everything but this pop up, dont let to be opened 2 popup at the same time
+
+    // if (window.matchMedia("(max-width: 992px)").matches) {
+        //self
+        var allWidgetsPopups = document.querySelectorAll('.filters-wrap-js');
+
+        var _iterator = _createForOfIteratorHelper(allWidgetsPopups),
+            _step;
+
+        try {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                var wrap = _step.value;
+                var header = wrap.querySelector('.sort-btn-js');
+                var content = wrap.querySelector('.sort-popup-content-js');
+
+                if (self !== header) {
+                    $(header).removeClass('active');
+                    $(content).slideUp(function () {
+                        $(this).removeClass('active');
+                    });
+                }
+            }
+        } catch (err) {
+            _iterator.e(err);
+        } finally {
+            _iterator.f();
+        }
+    // } 
+    //
+
+
+    event.stopPropagation();
+    document.body.addEventListener('click', widgetsPopupsMissclick);
+}); //fix
+
+
+$(document).on('click', '.mob-sort-btn-js', function (e) {
+    e.preventDefault();
+    var self = this;
+    document.body.removeEventListener('click', widgetsPopupsMissclick);
+    $(this).toggleClass('active');
+    $(this.parentElement).find('.mob-sort-popup-content-js').fadeToggle(function () {
+        $(this).toggleClass('active');
+    }); // close everything but this pop up, dont let to be opened 2 popup at the same time
+
+    // if (window.matchMedia("(max-width: 992px)").matches) {
+        //self
+        var allWidgetsPopups = document.querySelectorAll('.mob-filters-wrap-js');
+
+        var _iterator = _createForOfIteratorHelper(allWidgetsPopups),
+            _step;
+
+        try {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                var wrap = _step.value;
+                var header = wrap.querySelector('.mob-sort-btn-js');
+                var content = wrap.querySelector('.mob-sort-popup-content-js');
+
+                if (self !== header) {
+                    $(header).removeClass('active');
+                    $(content).slideUp(function () {
+                        $(this).removeClass('active');
+                    });
+                }
+            }
+        } catch (err) {
+            _iterator.e(err);
+        } finally {
+            _iterator.f();
+        }
+    // } 
+    //
+
+
+    event.stopPropagation();
+    document.body.addEventListener('click', widgetsPopupsMissclick);
+}); //fix
+
+
+
+
     window.addEventListener('resize', function () {
         if (window.matchMedia("(max-width: 768px)").matches) {
             document.body.removeEventListener('click', widgetsPopupsMissclick);
@@ -1359,3 +1449,68 @@ $(document).on('mouseout','#modal-review .rating',function () {
        val = $this.find('input:checked').val()>0?$this.find('input:checked').val():0;
     $this.attr('data-total-value',val);
 });
+
+$(document).ready(function () {
+    $("#modal-hello").fancybox({
+        'overlayShow': true
+    }).trigger('click');
+});
+
+
+
+var modalCookie = document.querySelector('#modal-cookie');
+var modalCookieClose = document.querySelector('#close-cookie');
+var header = document.querySelector('.header');
+var closePolicy = document.querySelector('#close-policy');
+var inputCheckbox1 = document.querySelector('.sort-popup-content-js #long-check-1');
+var inputCheckbox2 = document.querySelector('.sort-popup-content-js #long-check-2');
+var inputCheckbox3 = document.querySelector('.sort-popup-content-js #long-check-3');
+
+var mobinputCheckbox1 = document.querySelector('.mob-sort-popup-content-js #mob-long-check-1');
+var mobinputCheckbox2 = document.querySelector('.mob-sort-popup-content-js #mob-long-check-2');
+var mobinputCheckbox3 = document.querySelector('.mob-sort-popup-content-js #mob-long-check-3');
+var sortBtn = document.querySelector('.sort-popup-content-js');
+var mobsortBtn = document.querySelector('.mob-sort-popup-content-js');
+
+
+
+
+inputCheckbox1.addEventListener('click', function(){
+    sortBtn.style.display = 'none';
+    sortBtn.classList.remove("active");
+})
+inputCheckbox3.addEventListener('click', function(){
+    sortBtn.style.display = 'none';
+    sortBtn.classList.remove("active");
+
+})
+inputCheckbox2.addEventListener('click', function(){
+    sortBtn.style.display = 'none';
+    sortBtn.classList.remove("active");
+
+})
+mobinputCheckbox1.addEventListener('click', function(){
+    mobsortBtn.style.display = 'none';
+    mobsortBtn.classList.remove("active");
+})
+mobinputCheckbox3.addEventListener('click', function(){
+    mobsortBtn.style.display = 'none';
+    mobsortBtn.classList.remove("active");
+
+})
+mobinputCheckbox2.addEventListener('click', function(){
+    mobsortBtn.style.display = 'none';
+    mobsortBtn.classList.remove("active");
+
+})
+modalCookieClose.addEventListener('click', function(){
+    modalCookie.style.display = 'none';
+    header.style.top = '0';
+})
+
+closePolicy.addEventListener('click', function(){
+    modalCookie.style.display = 'none';
+    header.style.top = '0';
+})
+
+
