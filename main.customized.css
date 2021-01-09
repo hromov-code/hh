@@ -30,7 +30,7 @@ color: #2F2D2D;
     padding: 10px 78px;
     border-radius: 0 5px 0px 0;
     background-color: #fff;
-    min-width: 725px;
+    min-width: 727px;
     border: 1px solid #E5E5E5;
     border-width: 1px 1px 1px 0;
 }
@@ -303,7 +303,12 @@ color: #2F2D2D;
         margin-left: 76% !important;
     }
 }
+@media (max-width: 768px){
 
+    .wrap-policy__text::after {
+        bottom: 89px;
+    }
+}
 @media (max-width:767.98px) {
     .only-desc{
         display: none!important;
@@ -375,9 +380,7 @@ color: #2F2D2D;
 
         display: none !important;
     }
-    .wrap-policy__text::after {
-        bottom: 89px;
-    }
+
     .form-wrap__more-filters-btn.more-filters-btn-js.d-md-none{
         width: auto;
     }
