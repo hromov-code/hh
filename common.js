@@ -1479,12 +1479,10 @@ var mobsortBtn = document.querySelector('.mob-sort-popup-content-js');
 
 modalCookieClose.addEventListener('click', function(){
     modalCookie.style.display = 'none';
-    header.style.top = '0';
 })
 
 closePolicy.addEventListener('click', function(){
     modalCookie.style.display = 'none';
-    header.style.top = '0';
 })
 
 
